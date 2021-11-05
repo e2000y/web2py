@@ -20,9 +20,11 @@ if MULTI_USER_MODE:
     auth.settings.extra_fields['auth_user'] = \
         [Field('is_manager', 'boolean', default=False, writable=False)]
     auth.define_tables()                           # creates all needed tables
-    auth.settings.registration_requires_verification = False
+    auth.settings.registration_requires_verification = True
     auth.settings.registration_requires_approval = True
     auth.settings.reset_password_requires_verification = True
+
+    auth.settings.actions_disabled.append('register')
 
     db.define_table('app', Field('name'), Field('owner', db.auth_user))
 

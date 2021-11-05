@@ -12,7 +12,7 @@ WEB2PY_VERSION_URL = WEB2PY_URL + '/examples/default/version'
 DEMO_MODE = False
 
 # if visible_apps is not empty only listed apps will be accessible
-FILTER_APPS = []
+FILTER_APPS = ['eden']
 
 # To upload on google app engine this has to point to the proper appengine
 # config file
